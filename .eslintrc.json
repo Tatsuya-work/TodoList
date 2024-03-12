@@ -1,12 +1,13 @@
 {
   "extends": [
-    "plugin:vue/vue3-essential",
+    "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier/skip-formatting"
+    "@vue/typescript/recommended"
   ],
-  "parserOptions": {
-    "ecmaVersion": "latest"
+  "plugins": ["vue", "@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true
   },
   "rules": {
     "vue/multi-word-component-names": "off",
