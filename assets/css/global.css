@@ -1,8 +1,17 @@
 @import "@fontsource/noto-sans";
 
 :root {
+  /* font */
   --font-gray: #A4A4A4;
   --font-black: #000000;
+  --font-blue:#0000ff;
+
+  /* border */
+  --border-gray: #A4A4A4;
+  --border-black: #000000;
+  --border-blue: #0000ff;
+
+  /* Backbround */
 }
 
 * {
