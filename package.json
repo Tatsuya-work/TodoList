@@ -9,8 +9,9 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/",
+    "lint": "eslint . --fix *.{ts,vue}",
+    "format": "prettier --write *.{ts,vue}",
+    "fix":"npm run lint & npm run format",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
