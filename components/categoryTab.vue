@@ -22,8 +22,6 @@ const onClickItem = (item: string): void => {
 
 <style>
 .category-tab {
-  margin: 0%;
-  padding: 0%;
   display: inline-flex;
   align-items: flex-start;
   flex-direction: column;
@@ -33,6 +31,7 @@ const onClickItem = (item: string): void => {
   cursor: pointer;
   font-weight: 1000;
   font-size: 20px;
+  color: var(--font-black);
 }
 
 .item {
