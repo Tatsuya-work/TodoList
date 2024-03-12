@@ -10,7 +10,7 @@ const meta: Meta<typeof categoryTab> = {
         setup() {
             return { args };
         },
-        template: '<category_tab v-bind="args" />',
+        template: '<categoryTab v-bind="args" />',
         parameters: { actions: { argTypesRegex: '^on.*' } },
     }),
 };

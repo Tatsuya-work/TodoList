@@ -1,15 +1,8 @@
 @import "@fontsource/noto-sans";
 
 :root {
-  --background-gray:  #EFF3F8;
-  --background-white:  #FFFFFF;
-  --background-dark: #000000;
   --font-gray: #A4A4A4;
-  --font-white: #FFFFFF;
-  --font-gray-disabled: #A4A4A440;
   --font-black: #000000;
-  --accent: #1E3FC9;
-  --accent-hover: #1E3FC94D;
 }
 
 * {

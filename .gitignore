@@ -13,6 +13,7 @@ dist
 dist-ssr
 coverage
 *.local
+.nuxt
 
 /cypress/videos/
 /cypress/screenshots/
@@ -29,6 +30,3 @@ coverage
 
 *.tsbuildinfo
 package-lock.json
-
-# others
-example.stories.ts
