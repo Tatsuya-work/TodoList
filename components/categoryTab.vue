@@ -1,14 +1,14 @@
 <template>
   <div class="category-tab">
-    <div class="title" @click="onClickItem('All Tasks')"> All Tasks </div>
-    <div class="item" v-for="(item, index) in category.items" :key="index" @click="onClickItem(item)"> {{ item }} </div>
+    <div class="title" @click="onClickItem('All Tasks')">All Tasks</div>
+    <div v-for="(item, index) in category.items" :key="index" class="item" @click="onClickItem(item)">{{ item }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
 // Prop定義
 const category = defineProps<{
-  items: string[]
+  items: string[];
 }>();
 
 // Emit定義
