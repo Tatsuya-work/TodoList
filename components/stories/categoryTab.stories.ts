@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import category_tab from "../category_tab.vue";
+import categoryTab from "../categoryTab.vue";
 
-const meta: Meta<typeof category_tab> = {
-    title: "components/category_tab",
-    component: category_tab,
+const meta: Meta<typeof categoryTab> = {
+    title: "components/categoryTab",
+    component: categoryTab,
     render: (args) => ({
-        components: { category_tab },
+        components: { categoryTab },
         tags: ["autodocs"],
         setup() {
             return { args };
