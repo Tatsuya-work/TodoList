@@ -13,5 +13,6 @@ declare module "vue" {
     CategoryTab: (typeof import("./../components/categoryTab.vue"))["default"];
     RouterLink: (typeof import("vue-router"))["RouterLink"];
     RouterView: (typeof import("vue-router"))["RouterView"];
+    ShowTask: (typeof import("./../components/showTask.vue"))["default"];
   }
 }
