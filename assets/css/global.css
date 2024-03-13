@@ -12,6 +12,8 @@
   --border-blue: #0000ff;
 
   /* Backbround */
+  --background-gray: #dbdada;
+  --background-white: #FFFFFF;
 }
 
 * {
