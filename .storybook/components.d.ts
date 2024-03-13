@@ -7,7 +7,9 @@ export {}
 
 declare module "vue" {
   export interface GlobalComponents {
+    AddCategory: (typeof import("./../components/addCategory.vue"))["default"];
     AddCategoryButton: (typeof import("./../components/addCategoryButton.vue"))["default"];
+    AddTask: (typeof import("./../components/addTask.vue"))["default"];
     CategoryTab: (typeof import("./../components/categoryTab.vue"))["default"];
     RouterLink: (typeof import("vue-router"))["RouterLink"];
     RouterView: (typeof import("vue-router"))["RouterView"];
