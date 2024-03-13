@@ -1,5 +1,5 @@
 <template>
-  <div class="category-text">{{ category.name }}</div>
+  <div class="category-text">{{ prop.category }}</div>
   <div class="add-task">
     <input v-model="taskName" class="add-task-form" placeholder="Add a new task" />
     <div class="add-task-button" @click="onClickButton(taskName)">Add</div>
@@ -11,8 +11,8 @@
 const taskName = ref("");
 
 // Prop定義
-const category = defineProps<{
-  name: string;
+const prop = defineProps<{
+  category: string;
 }>();
 
 // Emit定義

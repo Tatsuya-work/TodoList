@@ -20,6 +20,6 @@ export default meta;
 export const Default = {};
 export const Pattern1: StoryObj = {
   args: {
-    name: "Work"
+    category: "Work"
   }
 };
