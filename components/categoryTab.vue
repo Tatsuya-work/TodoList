@@ -20,7 +20,7 @@ const onClickItem = (item: string): void => {
 };
 </script>
 
-<style>
+<style scoped>
 .category-tab {
   display: inline-flex;
   align-items: flex-start;

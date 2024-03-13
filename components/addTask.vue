@@ -27,7 +27,7 @@ const onClickButton = (task: string): void => {
 };
 </script>
 
-<style>
+<style scoped>
 .category-text {
   font-size: 35px;
   font-weight: 900;

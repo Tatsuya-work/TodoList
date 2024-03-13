@@ -32,7 +32,7 @@ const clickButton = (): void => {
 };
 </script>
 
-<style>
+<style scoped>
 .add-category-button {
   cursor: pointer;
   display: inline-flex;
