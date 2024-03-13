@@ -20,8 +20,8 @@ const addCategory = (newCategory?: string): void => {
   if (newCategory != null && newCategory != "") {
     buttonFlag.value = true;
     formFlag.value = false;
-    emit("onClick", newCategory);
     categoryName.value = "";
+    emit("onClick", newCategory);
   }
 };
 
