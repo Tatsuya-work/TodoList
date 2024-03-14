@@ -21,8 +21,7 @@ export function getTasks(category: string) {
   for (let i = 0; i < tasksJson.Categoty.length; i++) {
     if (tasksJson.Categoty[i].Name == category) {
       for (let j = 0; j < tasksJson.Categoty[i].Task.length; j++) {
-        tasks[j].name = tasksJson.Categoty[i].Task[j].Name;
-        tasks[j].isCheck = tasksJson.Categoty[i].Task[j].isCheck;
+        tasks.push({ name: tasksJson.Categoty[i].Task[j].Name, isCheck: tasksJson.Categoty[i].Task[j].isCheck });
       }
     }
     break;
