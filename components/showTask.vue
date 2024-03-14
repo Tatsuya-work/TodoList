@@ -14,7 +14,6 @@
 // Prop定義
 const prop = defineProps<{
   tasks: {
-    category: string;
     task: string;
     ischeck: boolean;
   }[];
