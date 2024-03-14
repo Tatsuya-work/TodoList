@@ -1,10 +1,10 @@
 <template>
   <li v-for="(task, index) in prop.tasks" :key="index" class="task-list">
     <label class="task-line">
-      <input v-model="task.ischeck" type="checkbox" class="checkbox" @change="onChangeCheck(index)" />
+      <input v-model="task.isCheck" type="checkbox" class="checkbox" @change="onChangeCheck(index)" />
       <span class="dummy-checkbox" />
-      <span :style="{ textDecoration: task.ischeck ? 'line-through' : 'none' }" class="task-name">
-        {{ task.task }}
+      <span :style="{ textDecoration: task.isCheck ? 'line-through' : 'none' }" class="task-name">
+        {{ task.name }}
       </span>
     </label>
   </li>
@@ -14,8 +14,8 @@
 // Prop定義
 const prop = defineProps<{
   tasks: {
-    task: string;
-    ischeck: boolean;
+    name: string;
+    isCheck: boolean;
   }[];
 }>();
 

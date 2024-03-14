@@ -37,7 +37,7 @@ const clickButton = (): void => {
   cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: 25px;
   color: var(--font-gray);
 }
 
