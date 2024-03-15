@@ -30,13 +30,13 @@ const onClickItem = (item: string): void => {
 .title {
   cursor: pointer;
   font-weight: 1000;
-  font-size: 20px;
+  font-size: 25px;
   color: var(--font-black);
 }
 
 .item {
   cursor: pointer;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 23px;
 }
 </style>
