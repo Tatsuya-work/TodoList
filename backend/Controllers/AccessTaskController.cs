@@ -1,4 +1,5 @@
 ﻿using TodoList.Usecases;
+using TodoList.Data.Class;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TodoList.Controllers
@@ -16,20 +17,19 @@ namespace TodoList.Controllers
             _accessTaskUsecase = accessTaskUsecase;
         }
 
-        [HttpPut]
+        [HttpPut("AddTask")]
         public void AddTask(string newTask)
         {
-            // プロジェクトファイル解析
             _accessTaskUsecase.AddTask(newTask);
         }
 
-        [HttpGet]
-        public object GetTask(string category)
+        [HttpGet("GetTask")]
+        public TaskList GetTask(string category)
         {
             return(_accessTaskUsecase.GetTask(category));
         }
 
-        [HttpPut]
+        [HttpPut("DoneTask")]
         public void DoneTask(int id) 
         {
             _accessTaskUsecase.DoneTask(id);

@@ -1,4 +1,4 @@
-﻿using TodoList.Domains;
+﻿using TodoList.Data.Class;
 
 namespace TodoList.Usecases
 {
@@ -6,7 +6,7 @@ namespace TodoList.Usecases
     {
         void AddTask(string newTask);
 
-        object GetTask(string category);
+        TaskList GetTask(string category);
 
         void DoneTask(int id);
     }
