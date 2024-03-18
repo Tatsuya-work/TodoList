@@ -1,12 +1,28 @@
 ﻿using TodoList.Usecases;
 using TodoList.Data.Class;
+using System.Diagnostics;
 
 namespace TodoList.Domains
 {
     public class AccessTaskInteractor : IAccessTaskUsecase
     {
-        public void AddTask(string newTask)
+        public void AddTask(string newTask, string category)
         {
+            var taskListJson = JsonExtensions.DeserializeJson();
+            int categoryCount = taskListJson.Categoty.Count;
+
+            for (int i = 0; i < categoryCount; i++)
+            {
+                if (category == taskListJson.Categoty[i].Name)
+                {
+                    var tmp = new TaskItem();
+                    tmp.Name = newTask;
+                    tmp.isCheck = false;
+                    taskListJson.Categoty[i].Task.Add(tmp);
+                }
+            }
+
+            JsonExtensions.SerializeJson(taskListJson);
             return;
         }
 

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TodoList.Data.Class
 {
@@ -14,6 +15,14 @@ namespace TodoList.Data.Class
             sr.Close();
 
             return json;
+        }
+
+        public static void SerializeJson(TaskList taskList)
+        {
+            string path = @"Data/task.json";
+            var json = JsonConvert.SerializeObject(taskList, Formatting.Indented);
+            File.WriteAllText(path, json);
+            return;
         }
     }
 

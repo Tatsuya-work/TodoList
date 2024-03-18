@@ -18,15 +18,15 @@ namespace TodoList.Controllers
         }
 
         [HttpPut("AddTask")]
-        public void AddTask(string newTask)
+        public void AddTask(string newTask, string category)
         {
-            _accessTaskUsecase.AddTask(newTask);
+            _accessTaskUsecase.AddTask(newTask, category);
         }
 
         [HttpGet("GetTask")]
         public List<TaskItem> GetTask(string category)
         {
-            return(_accessTaskUsecase.GetTask(category));
+            return _accessTaskUsecase.GetTask(category);
         }
 
         [HttpPut("DoneTask")]
