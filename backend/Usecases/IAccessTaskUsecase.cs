@@ -6,7 +6,7 @@ namespace TodoList.Usecases
     {
         void AddTask(string newTask);
 
-        TaskList GetTask(string category);
+        List<TaskItem> GetTask(string category);
 
         void DoneTask(int id);
     }

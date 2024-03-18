@@ -24,7 +24,7 @@ namespace TodoList.Controllers
         }
 
         [HttpGet("GetTask")]
-        public TaskList GetTask(string category)
+        public List<TaskItem> GetTask(string category)
         {
             return(_accessTaskUsecase.GetTask(category));
         }
