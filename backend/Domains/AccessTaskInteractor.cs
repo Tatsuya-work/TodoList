@@ -22,7 +22,7 @@ namespace TodoList.Domains
                         isCheck = false,
                         id = random.Next(1, 99999999)
                     };
-                    taskListJson.Category[i].Task.Add(tmp);
+                    taskListJson.Category[i].Task!.Add(tmp);
                 }
             }
 
@@ -81,7 +81,25 @@ namespace TodoList.Domains
 
         public void DoneTask(int id)
         {
-            return;
+            var taskListJson = JsonExtensions.DeserializeJson();
+            int categoryCount = taskListJson.Category.Count;
+
+            for (int i = 0; i < categoryCount; i++)
+            {
+                var targetTaskList = taskListJson.Category[i].Task!;
+                int taskCount = targetTaskList.Count;
+
+                for (int j = 0; j < taskCount; j++)
+                {
+                    if (targetTaskList[j].id == id)
+                    {
+                        taskListJson.Category[i].Task![j].isCheck = true;
+                        goto Exit;
+                    }
+                }
+            }
+
+            Exit: JsonExtensions.SerializeJson(taskListJson);
         }
     }
 }
