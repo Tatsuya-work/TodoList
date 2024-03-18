@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import addTask from "../addTask.vue";
+import addTaskTab from "../addTaskTab.vue";
 
-const meta: Meta<typeof addTask> = {
-  title: "components/addTask",
-  component: addTask,
+const meta: Meta<typeof addTaskTab> = {
+  title: "components/addTaskTab",
+  component: addTaskTab,
   render: (args) => ({
-    components: { addTask },
+    components: { addTaskTab },
     tags: ["autodocs"],
     setup() {
       return { args };
     },
-    template: '<addTask v-bind="args" />',
+    template: '<addTaskTab v-bind="args" />',
     parameters: { actions: { argTypesRegex: "^on.*" } }
   })
 };

@@ -1,7 +1,7 @@
 <template>
-  <li v-for="(task, index) in prop.tasks" :key="index" class="task-list">
+  <li v-for="task in prop.tasks" :key="task.id" class="task-list">
     <label class="task-line">
-      <input v-model="task.isCheck" type="checkbox" class="checkbox" @change="onChangeCheck(index)" />
+      <input v-model="task.isCheck" type="checkbox" class="checkbox" @change="onChangeCheck(task.id)" />
       <span class="dummy-checkbox" />
       <span :style="{ textDecoration: task.isCheck ? 'line-through' : 'none' }" class="task-name">
         {{ task.name }}
@@ -16,15 +16,16 @@ const prop = defineProps<{
   tasks: {
     name: string;
     isCheck: boolean;
+    id: number;
   }[];
 }>();
 
 // Emit定義
 const emit = defineEmits<{
-  (e: "onChange", index: number): void;
+  (e: "onChange", id: number): void;
 }>();
-const onChangeCheck = (index: number): void => {
-  emit("onChange", index);
+const onChangeCheck = (id: number): void => {
+  emit("onChange", id);
 };
 </script>
 
