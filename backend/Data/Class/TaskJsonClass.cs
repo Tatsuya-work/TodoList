@@ -40,6 +40,6 @@ namespace TodoList.Data.Class
 
     public class TaskList
     {
-        public IList<Categoty> Categoty { get; set; }
+        public IList<Categoty> Category { get; set; }
     }
 }
