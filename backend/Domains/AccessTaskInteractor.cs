@@ -15,10 +15,14 @@ namespace TodoList.Domains
             {
                 if (category == taskListJson.Category[i].Name)
                 {
-                    var tmp = new TaskItem();
-                    tmp.Name = newTask;
-                    tmp.isCheck = false;
-                    taskListJson.Category[i].Task.Add(tmp);
+                    var random = new Random();
+                    var tmp = new TaskItem
+                    {
+                        Name = newTask,
+                        isCheck = false,
+                        id = random.Next(1, 99999999)
+                    };
+                    taskListJson.Category[i].Task!.Add(tmp);
                 }
             }
 
@@ -41,9 +45,12 @@ namespace TodoList.Domains
 
                     for (int j = 0; j < taskCount; j++)
                     {
-                        var tmp = new TaskItem();
-                        tmp.Name = targetTaskList[j].Name;
-                        tmp.isCheck = targetTaskList[j].isCheck;
+                        var tmp = new TaskItem
+                        {
+                            Name = targetTaskList[j].Name,
+                            isCheck = targetTaskList[j].isCheck,
+                            id = targetTaskList[j].id,
+                        };
                         taskList.Add(tmp);
                     }
                 }
@@ -59,9 +66,12 @@ namespace TodoList.Domains
 
                     for (int j = 0; j < taskCount; j++)
                     {
-                        var tmp = new TaskItem();
-                        tmp.Name = targetTaskList[j].Name;
-                        tmp.isCheck = targetTaskList[j].isCheck;
+                        var tmp = new TaskItem
+                        {
+                            Name = targetTaskList[j].Name,
+                            isCheck = targetTaskList[j].isCheck,
+                            id = targetTaskList[j].id,
+                        };
                         taskList.Add(tmp);
                     }
                 }
@@ -71,7 +81,25 @@ namespace TodoList.Domains
 
         public void DoneTask(int id)
         {
-            return;
+            var taskListJson = JsonExtensions.DeserializeJson();
+            int categoryCount = taskListJson.Category.Count;
+
+            for (int i = 0; i < categoryCount; i++)
+            {
+                var targetTaskList = taskListJson.Category[i].Task!;
+                int taskCount = targetTaskList.Count;
+
+                for (int j = 0; j < taskCount; j++)
+                {
+                    if (targetTaskList[j].id == id)
+                    {
+                        taskListJson.Category[i].Task![j].isCheck = true;
+                        goto Exit;
+                    }
+                }
+            }
+
+            Exit: JsonExtensions.SerializeJson(taskListJson);
         }
     }
 }

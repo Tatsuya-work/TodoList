@@ -30,6 +30,7 @@ namespace TodoList.Data.Class
     {
         public string Name { get; set; }
         public bool isCheck { get; set; }
+        public int id { get; set; }
     }
 
     public class Categoty
