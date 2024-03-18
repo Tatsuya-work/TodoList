@@ -4,7 +4,7 @@ namespace TodoList.Usecases
 {
     public interface IAccessTaskUsecase
     {
-        void AddTask(string newTask);
+        void AddTask(string newTask, string category);
 
         List<TaskItem> GetTask(string category);
 
