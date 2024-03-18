@@ -16,6 +16,7 @@ namespace TodoList
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IAccessTaskUsecase, AccessTaskInteractor>();
+            builder.Services.AddScoped<IAccessCategoryUsecase, AccessCategoryInteractor>();
 
             var app = builder.Build();
 
