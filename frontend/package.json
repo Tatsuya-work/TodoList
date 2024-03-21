@@ -42,9 +42,13 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@fontsource/noto-sans": "^5.0.17"
+    "@fontsource/noto-sans": "^5.0.17",
+    "axios": "^1.6.8"
   },
   "lint-staged": {
-    "*.{ts,vue}": ["eslint --fix", "prettier --write"]
+    "*.{ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

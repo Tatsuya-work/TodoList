@@ -18,6 +18,17 @@ namespace TodoList
             builder.Services.AddScoped<IAccessTaskUsecase, AccessTaskInteractor>();
             builder.Services.AddScoped<IAccessCategoryUsecase, AccessCategoryInteractor>();
 
+            // CORSƒIƒŠƒWƒ“Ý’è
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -26,6 +37,8 @@ namespace TodoList
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors("AllowAll");
 
             app.UseHttpsRedirection();
 
