@@ -1,5 +1,5 @@
 <template>
-  <div v-if="buttonFlag" class="add-category-button" @click="clickButton()">＋New category</div>
+  <div v-if="buttonFlag" class="add-category-button" @click="clickButton">＋New category</div>
   <div v-if="formFlag" class="imput-form">
     <input v-model="categoryName" class="add-category-form" placeholder="Category Name" />
     <div class="decision-button" @click="addCategory(categoryName)">Add</div>
@@ -14,7 +14,7 @@ const categoryName = ref("");
 
 // Emit定義
 const emit = defineEmits<{
-  (e: "onClick", newCategory?: string): void;
+  (e: "onClick", newCategory: string): void;
 }>();
 const addCategory = (newCategory?: string): void => {
   if (newCategory != null && newCategory != "") {
