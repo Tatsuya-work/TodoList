@@ -92,7 +92,7 @@ namespace TodoList.Domains
                 {
                     if (targetTaskList[j].id == id)
                     {
-                        taskListJson.Category[i].Task![j].isCheck = true;
+                        taskListJson.Category[i].Task![j].isCheck = !taskListJson.Category[i].Task![j].isCheck;
                         goto Exit;
                     }
                 }

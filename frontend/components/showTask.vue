@@ -11,13 +11,10 @@
 </template>
 
 <script setup lang="ts">
+import { Task } from "~/data/typings/taskJson";
 // Prop定義
 const prop = defineProps<{
-  tasks: {
-    name: string;
-    isCheck: boolean;
-    id: number;
-  }[];
+  tasks: Task[];
 }>();
 
 // Emit定義
