@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="category">
     <categoryTab :categorys="categorys" @on-click="categoryChange" />
     <addCategoryButton @on-click="addCategoryClick" />
   </div>
 
-  <div>
+  <div class="task">
     <addTaskTab :category="category" @on-click="addTaskClick" />
     <showTask :tasks="tasks" @on-change="doneTaskChange" />
   </div>
@@ -38,4 +38,32 @@ const doneTaskChange = async (id: number) => {
 }
 </script>
 
-<style></style>
+<style>
+template {
+  height: 100%;
+}
+.category {
+  float: left;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 70px;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.task {
+  float: right;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 200px;
+  border-left: 2px solid var(--border-gray);
+}
+
+addTask {
+  padding: 100px
+}
+</style>
