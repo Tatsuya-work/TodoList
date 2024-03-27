@@ -39,6 +39,7 @@ const onClickButton = (task: string): void => {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .add-task-form {

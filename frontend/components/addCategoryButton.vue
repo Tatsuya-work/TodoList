@@ -37,7 +37,7 @@ const clickButton = (): void => {
   cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  font-size: 25px;
+  font-size: 27px;
   color: var(--font-gray);
 }
 
@@ -49,9 +49,9 @@ const clickButton = (): void => {
 }
 
 .add-category-form {
-  width: 120px;
-  font-size: 15px;
-  height: 25px;
+  width: 150px;
+  font-size: 20px;
+  height: 30px;
   border: 2px solid var(--border-gray);
   padding: 2px 7px;
 }
@@ -64,9 +64,9 @@ const clickButton = (): void => {
 
 .decision-button {
   cursor: pointer;
-  font-size: 18px;
-  height: 25px;
-  width: 50px;
+  font-size: 20px;
+  height: 30px;
+  width: 60px;
   border-radius: 50px;
   border: 2px solid var(--border-black);
   text-align: center;
